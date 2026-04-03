@@ -2,7 +2,7 @@
 
 A modern, interactive finance dashboard frontend application featuring dynamic charts, role-based access control, smart insights, and fully functional filtering. Built with React (Next.js 16), TypeScript, Tailwind CSS v4, Recharts, and Zustand — focusing on a fast, responsive, and data-rich user experience.
 
-![Dashboard Preview](./screenshots/dashboard.png)
+![Dashboard Preview](Dashboard.png)
 
 ## 🚀 Setup Instructions
 
