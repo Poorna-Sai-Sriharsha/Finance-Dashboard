@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.5);
+}
+
+/* Dark mode scrollbar */
+.dark .scrollbar-thin {
+  scrollbar-color: rgba(100, 116, 139, 0.3) transparent;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.3);
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.5);
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 0ms;
+}
+
+html.dark * {
+  color-scheme: dark;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Recharts tooltip fix for dark mode */
+.dark .recharts-default-tooltip {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Input date picker styling */
+input[type="date"] {
+  color-scheme: light;
+}
+
+.dark input[type="date"] {
+  color-scheme: dark;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: inherit;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid rgb(16, 185, 129);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
